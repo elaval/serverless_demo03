@@ -35,6 +35,8 @@ initApp = function() {
                 d3.select('#sign-in-status').attr('class', 'visible');
                 d3.select('#sign-out')
                 .on('click', () => firebase.auth().signOut());
+                d3.select('#token').text(`Bearer ${accessToken}`);
+
             })
             
             d3.select('#sign-out')
